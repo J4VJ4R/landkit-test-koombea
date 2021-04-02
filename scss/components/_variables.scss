@@ -1,0 +1,29 @@
+//colors
+$color-one: #335EEA;
+$color-two: #506690;
+$color-three: #E5E5E5;
+$color-four: #869AB8;
+$color-five: #F3F7FB;
+$color-six: #42ba96;
+$color-seven: #f2c94c;
+$color-eight: #df4759;
+$color-nine: #6B7C93;
+$color-ten: #D9E2EF;
+$color-eleven: #335eea86;
+$color-twelve: #161C2D;
+@mixin display($size) {
+  @if $size == small {
+    @media (max-width: 576px) { @content; }
+  }@else if $size == mobile {
+    @media (max-width: 992px) { @content; }
+  }@else if $size == tablet-small-down {
+    @media (max-width: 768px) { @content; }
+  }
+  @else if $size == tablet-medium-up {
+    @media (min-width: 992px) { @content; }
+  }
+}
+//functions
+@function rem($value: 2rem) {
+  @return ($value / 16 * 1rem);
+}

@@ -1,0 +1,141 @@
+.full-post{
+  background-color: $color-three;
+  margin-top: -2rem;
+  &__container{
+    max-width: rem(680);
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__title{
+    font-style: normal;
+    font-weight: 900;
+    font-size: rem(43);
+    line-height: rem(53);
+    padding-top: rem(108);
+    text-align: center;
+    @include display(mobile){
+      font-size: rem(25);
+      padding-top: 2.75rem;
+      line-height: rem(38);
+    }
+    @include display(small){
+      font-size: rem(23);
+    }
+  }
+  &__description{
+    font-style: normal;
+    font-weight: 900;
+    font-size: 21px;
+    line-height: 32px;
+    text-align: center;
+    color: $color-two;
+    @include display(mobile){
+      font-size: rem(13);
+      padding: 0 1rem;
+      }
+  }
+  &__meta{
+    display: flex;
+  }
+  &__author-info{
+    display: flex;
+    padding-top: 4.125rem;
+    padding-bottom: rem(75);
+    justify-content: space-between;
+    @include display(mobile){
+      flex-wrap: wrap;
+      padding: 1.5rem 1rem;
+      justify-content: space-between;
+    }
+    @include display(small){
+      justify-content: center;
+    }
+  }
+  &__name-time-title{
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+  &__name-time-subtitle{
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 14px;
+    opacity: .7;
+    color: $color-two;
+  }
+  &__author-img{
+    margin-right: rem(12);
+    border-radius: 100%;
+  }
+  &__list{
+    display: flex;
+    list-style: none;
+  }
+  &__link{
+    text-decoration: none;
+  }
+  &__social-media{
+    display: flex;
+    align-items: center;
+    
+  }
+  &__title-social-media{
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 14px;
+    color: $color-four;
+    @include display(small){
+      display: none;
+    }
+  }
+  &__figure{
+    text-align: center;
+  }
+  &__figure-img{
+    border-radius: 5px;
+    padding-bottom: rem(15);
+    @include display(mobile){
+      width: 100%;
+      background-size: cover;
+      padding: 0 1rem;
+    }
+  }
+  &__reference{
+    text-align: center;
+    color: $color-four;
+    font-style: normal;
+    font-weight: 900;
+    font-size: rem(15);
+    line-height: rem(23);
+    padding-top: rem(15);
+  }
+  &__body{
+    padding-bottom: rem(120);
+    padding-top: rem(66);
+    @include display(mobile){
+      padding: 2rem 1rem;
+      padding-bottom: 3.5rem;
+      
+    }
+  }
+  &__body-text{
+    font-style: normal;
+    font-weight: 900;
+    font-size: rem(17);
+    line-height: 26px;
+    color: $color-twelve;
+    padding-top: 1.125rem;
+  }
+}
+.icon-instagram:before,
+.icon-facebook:before,
+.icon-twitter:before {
+  color: $color-four;
+  font-size: 21px;
+  padding-left: rem(18.88);
+}

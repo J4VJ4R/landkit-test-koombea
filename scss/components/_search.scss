@@ -1,0 +1,100 @@
+.search{
+  background-color: $color-three;
+  z-index: 900;
+  @include display(mobile){
+    padding: 0 1rem;
+  }
+  &__navigation{
+    position: relative;
+    padding: rem(56) 0 rem(50);
+    
+  }
+  &__input{
+    padding-right: 0.4rem;
+    position: relative;
+    padding-top: rem(21);
+    padding-bottom: rem(21);
+    padding-left: rem(45);
+    width: 100%;
+    border: none;    
+    border-radius: rem(10);
+    -webkit-box-shadow: 2px 6px 15px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 2px 6px 15px 0px rgba(0,0,0,0.4);
+    box-shadow: 2px 6px 15px 0px rgba(0,0,0,0.4);
+    &::placeholder{
+      font-style: normal;
+      font-weight: 900;
+      font-size: 17px;
+      line-height: 26px;
+      color: $color-twelve;
+    }
+  }
+  &__button{
+    color: white;
+    background-color: $color-one;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 17px;
+    line-height: 26px;
+    padding: rem(8.2) rem(15);
+    width: rem(84);
+    border-radius: 7px;
+    position: absolute;
+    right: 1.625rem;
+    top: rem(65);
+    cursor: pointer;
+  }
+  &__icon{
+    position: absolute;
+    top: rem(75);
+    left: rem(18);
+
+  }
+}
+.search-result{
+  
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow-x: hidden;
+  max-height: 80%;
+  display: none; // to show search result
+  &__table{
+    
+    padding: .5rem;
+  }
+  &__item{
+    width: 100vw;
+    padding: rem(10);
+    border-radius: rem(10);
+
+    &:hover{
+      border: 2px solid $color-one;
+      border-radius: 10px;
+      
+    }
+  }
+  &__link{
+    text-decoration: none;
+    font-size: rem(18);
+    color: $color-four;
+  }
+  &__row{
+    display: flex;
+    flex-direction: column;
+  }
+}
+//styles for plugin
+
+.dataTables_paginate,
+.dataTables_info,
+#js-search-table_filter,
+.dataTables_filter,
+.dataTables_length{
+  display: none;
+}
+.icon-search:before {
+  background-color: red;
+  color: red;
+  content: "\e900";
+}

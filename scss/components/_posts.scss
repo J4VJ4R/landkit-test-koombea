@@ -1,0 +1,181 @@
+.posts{
+  background-color: $color-three;
+  // display: flex;
+  flex-wrap: wrap;
+  padding-bottom: rem(235);
+  @include display(mobile){
+    padding-bottom: 1.6875rem;
+  }
+  &__container{
+    max-width: rem(1041);
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include display(mobile){
+      justify-content: space-evenly;
+    }
+  }
+  &__content{
+    max-width: rem(320);
+    background-color: white;
+    margin-bottom: rem(33);
+    display: none;
+    border-radius: rem(10);
+    -webkit-box-shadow: 2px 2px 15px 1px rgba(0,0,0,0.4);
+    -moz-box-shadow: 2px 2px 15px 1px rgba(0,0,0,0.4);
+    box-shadow: 2px 2px 15px 1px rgba(0,0,0,0.4);
+    &:hover{
+      -webkit-box-shadow: 2px 2px 15px 1px $color-eleven;
+      -moz-box-shadow: 2px 2px 15px 1px $color-eleven;
+      box-shadow: 2px 2px 15px 1px $color-eleven;
+      transition: all .5s ;
+    }
+  }
+  &__figure{
+    position: relative;
+    &:after{
+      height: 2.40625rem;
+      width: 100%;
+      background-color: transparent;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 80%;
+      background-image: radial-gradient(circle farthest-corner at 2rem -70rem, transparent 97%, rgba(0, 0, 0, 0) 0%, white 50%);
+    }
+  }
+  &__img{
+    border-top-left-radius: rem(10);
+    border-top-right-radius: rem(10);
+  }
+  &__figure-link-red{
+    text-decoration: none;
+    color: white;
+    background-color: $color-eight;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 14px;
+    padding: rem(5) rem(9);
+    border-radius: 15px;
+    position: absolute;
+    top: rem(13);
+    left: rem(16);
+  }
+  &__figure-link-yellow{
+    text-decoration: none;
+    color: white;
+    background-color: $color-seven;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 14px;
+    padding: rem(5) rem(9);
+    border-radius: 15px;
+    position: absolute;
+    top: rem(13);
+    left: rem(16);
+  }
+  &__img2{
+    position: absolute;
+    top: rem(16);
+    right: rem(15);
+    z-index: 0;
+  }
+  &__header-link{
+    text-decoration: none;
+  }
+  &__title{
+    font-style: normal;
+    font-weight: 900;
+    font-size: 21px;
+    line-height: 28px;
+    letter-spacing: -0.01em;
+    padding-top: rem(20);
+    padding-bottom: rem(8);
+    width: rem(260);
+    margin: auto;
+    color: $color-twelve;
+  }
+  &__body{
+    padding-bottom: rem(40);
+    border-bottom: 2px solid $color-five;
+    width: rem(260);
+    margin: auto;
+  }
+  &__footer{
+    display: flex;
+    align-items: center;
+    width: rem(260);
+    margin: auto;
+    position: relative;
+    &-date{
+      position: absolute;
+      color: $color-nine;
+      right: 0;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.07em;
+      padding-bottom: 1rem;
+    }
+    &-author{
+      padding-left: rem(7.26);
+      color: $color-nine;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.07em;
+      padding-bottom: 1rem;
+    }
+    &-figure{
+      padding-top: rem(16);
+      padding-bottom: rem(27);
+    }
+  }
+  &__footer-figure-img{
+    border-radius: 100%;
+  }
+  &__button{
+    margin-top: rem(95);
+    background-color: transparent;
+    display: block;
+    border: 2px solid $color-ten;
+    background: transparent;
+    width: rem(571);
+    padding: .7rem rem(28);
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    &:hover{
+      -webkit-box-shadow: 2px 2px 15px 1px rgba(0,0,0,0.4);
+      -moz-box-shadow: 2px 2px 15px 1px rgba(0,0,0,0.4);
+      box-shadow: 2px 2px 15px 1px rgba(0,0,0,0.4);
+      transition: all .5s ;
+    }
+    @include display(small){
+      margin: 0 6rem;
+    }
+    &1{
+      color: $color-one;
+      background: transparent;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 17px;
+      line-height: 26px;
+      border: none;
+      cursor: pointer;
+    }
+    &-img{
+      position: absolute;
+      top: rem(19);
+      right: rem(27);
+      cursor: pointer;
+    }
+  }
+  
+}
